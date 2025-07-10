@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Login - Maria</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff6f8;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: #fff0f3;
+      border: 2px dashed #f49ca8;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      color: #c0395f;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #f49ca8;
+      border-radius: 12px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #ffc2d1;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-weight: bold;
+      color: #732c38;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff8ba0;
+    }
+
+    .error {
+      color: #c0392b;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .back-home {
+      display: block;
+      margin-top: 1.2rem;
+      text-decoration: none;
+      color: #8e3b4b;
+      font-weight: 600;
+    }
+
+    .back-home:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <div id="error" class="error"></div>
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+      const errorDiv = document.getElementById('error');
+
+      if (user === 'mariaabilfazal' && pass === 'afm2096') {
+        location.href = 'dashboard.html';
+      } else {
+        errorDiv.textContent = 'Incorrect username or password.';
+      }
+    }
+  </script>
+
+</body>
+</html>

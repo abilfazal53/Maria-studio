@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - Maria</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script defer src="dashboard.js"></script>
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <h1>Maria’s Dashboard</h1>
+    <a href="index.html" class="home-link">← Back to Website</a>
+  </header>
+
+  <main class="dashboard-content">
+
+    <!-- BLOG SECTION -->
+    <section class="form-section">
+      <h2>Add New Blog</h2>
+      <input type="text" id="blogTitle" placeholder="Blog Title" />
+      <textarea id="blogPreview" placeholder="Blog Preview (1-2 lines)"></textarea>
+      <textarea id="blogContent" placeholder="Full Blog Content"></textarea>
+      <button onclick="saveBlog()">Save Blog</button>
+    </section>
+
+    <!-- ARTWORK SECTION -->
+    <section class="form-section">
+  <h2>Upload Artwork</h2>
+  <input type="file" id="artFile" accept="image/*" />
+  <select id="artSection">
+    <option value="coasters">Coasters</option>
+    <option value="bookmarks">Bookmarks</option>
+    <option value="magnets">Magnets</option>
+    <option value="paintings">Paintings & Sketches</option>
+  </select>
+  <div id="previewContainer" style="margin: 1rem 0;"></div>
+  <button onclick="saveArt()">Save Artwork</button>
+  <button onclick="clearArt()" style="margin-top: 1rem; background: #d95372; color: white;">Clear All Art</button>
+</section>
+
+
+    <!-- BLOG LIST -->
+    <section class="form-section">
+      <h2>Existing Blogs</h2>
+      <ul id="blogList"></ul>
+    </section>
+
+    <!-- ART LIST -->
+    <section class="form-section">
+      <h2>Existing Artworks</h2>
+      <ul id="artList"></ul>
+    </section>
+
+  </main>
+
+</body>
+</html>

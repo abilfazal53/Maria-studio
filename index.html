@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maria's studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Maria's Studio</h1>
+    <nav class="nav-tabs">
+      <a href="#about">About</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#art">Art & Craft</a>
+      <a href="#contact">Contact</a>
+      <a href="admin.html" class="admin-link">Admin Login</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Welcome to my world of thoughts, doodles, and handcrafted dreams. I’m Maria, and this is my online sketchbook – a diary in color and words.</p>
+  </section>
+
+  <!-- Blogs Section -->
+  <section id="blogs">
+    <h2>Latest Writings</h2>
+    <div id="blogContainer"></div>
+  </section>
+
+  <!-- Art & Craft Buttons -->
+  <section id="art">
+    <h2>My Art & Craft</h2>
+    <div class="art-buttons">
+      <button onclick="openArtCategoryModal('coasters')">Coasters</button>
+      <button onclick="openArtCategoryModal('magnets')">Fridge Magnets</button>
+      <button onclick="openArtCategoryModal('bookmarks')">Bookmarks</button>
+      <button onclick="openArtCategoryModal('paintings')">Paintings & Sketches</button>
+    </div>
+  </section>
+
+  <!-- Art Modal (All Categories) -->
+  <div id="categoryArtModal" class="modal-overlay hidden" onclick="closeArtModal()">
+    <div class="art-modal-content" onclick="event.stopPropagation()">
+      <span class="close-modal" onclick="closeArtModal()">&times;</span>
+      <h3 id="modalCategoryTitle"></h3>
+      <div id="modalImageContainer" class="art-modal-image-grid"></div>
+    </div>
+  </div>
+
+  <!-- Blog Modal -->
+  <div id="blogModal" class="blog-modal-overlay hidden" onclick="closeBlogModal()">
+    <div class="blog-modal-content" onclick="event.stopPropagation()">
+      <span class="blog-close-modal" onclick="closeBlogModal()">&times;</span>
+      <h3 id="modalBlogTitle"></h3>
+      <p id="modalBlogContent"></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me via Instagram: 
+      <a href="https://instagram.com/_creative._.inks_">@_creative._.inks_</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Maria's studio. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

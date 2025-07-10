@@ -1,0 +1,222 @@
+/* 🌸 Dreamy Sketchbook Theme */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff6f8;
+  color: #3b1e2e;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffe6ec;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+    font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  color: #c0395f;
+  margin: 0;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-tabs a {
+  background: #ffd6e6;
+  color: #732c38;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.nav-tabs a:hover {
+  background: #ff9db5;
+  color: white;
+}
+
+.admin-link {
+  border: 2px dashed #ff8ba0;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff0f4;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #c0395f;
+  margin-bottom: 1rem;
+}
+
+/* Art Buttons */
+.art-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.art-buttons button {
+  padding: 0.5rem 1.2rem;
+  background: #ffd6e6;
+  border: 2px dashed #c0395f;
+  border-radius: 20px;
+  color: #732c38;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.art-buttons button:hover {
+  background: #ffc0d3;
+  transform: scale(1.05);
+}
+
+/* Category Art Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 240, 245, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+}
+
+.art-modal-content {
+  background: #fff0f4;
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.art-modal-content h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #c0395f;
+}
+
+.art-modal-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.art-modal-image-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Modal Close */
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 2rem;
+  color: #c0395f;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Blog Modal */
+/* Blog Card Styling */
+.blog-card button {
+  margin-top: 0.5rem;
+  background: #ffc2d1;
+  color: #732c38;
+  border: 2px dashed #c0395f;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-card button:hover {
+  background: #ff9db5;
+  color: white;
+  transform: scale(1.05);
+}
+
+.blog-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 240, 245, 0.85);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.blog-modal-content {
+  background: #fff0f4;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.blog-close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #c0395f;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #905060;
+  background: #ffeef4;
+  border-top: 2px dashed #fbbecf;
+}
+
+.hidden {
+  display: none;
+}
